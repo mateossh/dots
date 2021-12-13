@@ -69,6 +69,7 @@ opt('o', 'foldenable', false)
 require('gitsigns').setup()
 require('project_nvim').setup()
 require('mateossh.comment')
+require('mateossh.neogit')
 
 require('telescope').load_extension('projects')
 
@@ -99,3 +100,4 @@ map('n', '<leader>pp', '<cmd>Telescope projects<cr>')
 map('n', '<leader>sc', '<cmd>:noh<cr>')  -- Clear search results
 
 map('n', '<leader>rr', '<cmd>:lua require(\'rest-nvim\').run()<cr>')
+map('n', '<leader>gs', '<cmd>:Neogit<cr>')

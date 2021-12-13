@@ -23,6 +23,7 @@ paq 'NTBBloodbath/rest.nvim'
 paq 'lewis6991/gitsigns.nvim'
 paq 'ahmedkhalf/project.nvim'
 paq 'numToStr/comment.nvim'
+paq 'TimUntersberger/neogit'
 
 
 paq 'ghifarit53/daycula-vim'
