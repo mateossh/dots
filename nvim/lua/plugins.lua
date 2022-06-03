@@ -4,7 +4,9 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use { 'wbthomason/packer.nvim' }
 
-  use { 'tpope/vim-commentary' }
+  use { 'nvim-lua/popup.nvim' }
+  use { 'nvim-lua/plenary.nvim' }
+
   use { 'scrooloose/nerdtree' }
 
   use { 'neovim/nvim-lspconfig' }
@@ -13,8 +15,6 @@ return require('packer').startup(function()
   use { 'hrsh7th/cmp-path' }
   use { 'hrsh7th/cmp-nvim-lsp' }
 
-  use { 'nvim-lua/popup.nvim' }
-  use { 'nvim-lua/plenary.nvim' }
   use { 'nvim-telescope/telescope.nvim' }
 
   use { 'nvim-treesitter/nvim-treesitter', run = TSUpdate }
@@ -26,8 +26,9 @@ return require('packer').startup(function()
   use { 'TimUntersberger/neogit' }
 
   use { 'nvim-orgmode/orgmode' }
+  use { 'folke/todo-comments.nvim' }
 
-
+  -- Color schemes
   use { 'ghifarit53/daycula-vim' }
   use { 'joshdick/onedark.vim' }
   use { 'tek256/simple-dark' }

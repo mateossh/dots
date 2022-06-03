@@ -88,6 +88,7 @@ opt('o', 'foldenable', false)
 
 require('gitsigns').setup()
 require('project_nvim').setup()
+require('todo-comments').setup()
 require('mateossh.comment')
 require('mateossh.neogit')
 require('mateossh.orgmode')
@@ -123,8 +124,9 @@ map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
 map('n', '<leader>bb', '<cmd>Telescope buffers<cr>')
 map('n', '<leader>pp', '<cmd>Telescope projects<cr>')
+vim.keymap.set('n', '<leader>/', '<cmd>Telescope current_buffer_fuzzy_find sorting_strategy=ascending<cr>')
 
 map('n', '<leader>sc', '<cmd>:noh<cr>')  -- Clear search results
 
-map('n', '<leader>rr', '<cmd>:lua require(\'rest-nvim\').run()<cr>')
+map('n', '<leader>rr', "<cmd>:lua require('rest-nvim').run()<cr>")
 map('n', '<leader>gs', '<cmd>:Neogit<cr>')
