@@ -18,6 +18,17 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim' }
 
   use { 'nvim-treesitter/nvim-treesitter', run = TSUpdate }
+  use { 'nvim-treesitter/nvim-treesitter-context' }
+
+use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    }
+}
+
+use { 'ThePrimeagen/harpoon' }
 
   use { 'NTBBloodbath/rest.nvim' }
   use { 'lewis6991/gitsigns.nvim' }
@@ -33,12 +44,12 @@ return require('packer').startup(function()
   use { 'joshdick/onedark.vim' }
   use { 'tek256/simple-dark' }
   use { 'rakr/vim-two-firewatch' }
-  use { 'junegunn/seoul256.vim' }
   use { 'sts10/vim-pink-moon' }
   use { 'adigitoleo/vim-mellow' }
   use { 'savq/melange' }
   use { 'Mangeshrex/uwu.vim' }
   use { 'owickstrom/vim-colors-paramount' }
   use { 'relastle/bluewery.vim' }
+  use { 'folke/tokyonight.nvim' }
 
 end)
