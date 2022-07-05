@@ -24,7 +24,4 @@ vim.opt.foldenable = false
 
 vim.opt.background = "dark"
 
-vim.g.tokyonight_style = "storm"
-vim.cmd('colorscheme tokyonight')
-
 vim.g.mapleader = " "
