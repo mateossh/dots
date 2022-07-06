@@ -14,6 +14,11 @@ local function opt(scope, key, value)
 	if scope ~= 'o' then scopes['o'][key] = value end
 end
 
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true }
+  if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
 local cmd = vim.cmd
 local o = vim.o
