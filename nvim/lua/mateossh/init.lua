@@ -83,3 +83,17 @@ map('n', '<leader>gh', '<cmd>:lua require("harpoon.ui").nav_file(1)<cr>')
 map('n', '<leader>gj', '<cmd>:lua require("harpoon.ui").nav_file(2)<cr>')
 map('n', '<leader>gk', '<cmd>:lua require("harpoon.ui").nav_file(3)<cr>')
 map('n', '<leader>gl', '<cmd>:lua require("harpoon.ui").nav_file(4)<cr>')
+
+
+vim.cmd [[
+  com! FormatXML :%!python3 -c "import xml.dom.minidom, sys; print(xml.dom.minidom.parse(sys.stdin).toprettyxml())"
+]]
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "go",
+  callback = function()
+    vim.opt.tabstop = 2
+    vim.opt.shiftwidth = 2
+    vim.opt.expandtab = false
+  end,
+})
