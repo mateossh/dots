@@ -57,7 +57,7 @@ require('lspconfig')['vuels'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
   settings = {
-    vetur = {
+    vue = {
       completion = {
         autoImport = true,
         useScaffoldSnippets = true
