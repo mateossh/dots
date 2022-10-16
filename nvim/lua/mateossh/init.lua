@@ -97,3 +97,23 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt.expandtab = false
   end,
 })
+
+vim.g.do_filetype_lua = 1
+
+-- Check first 25 lines for 'dt-bindings/zmk'
+vim.filetype.add({
+  pattern = {
+    ['.*'] = {
+      priority = -math.huge,
+      function(path, bufnr)
+        local content = vim.filetype.getlines(bufnr, 1, 25)
+
+        for _, line in ipairs(content) do
+          if vim.filetype.matchregex(line, [[\<dt-bindings\/zmk\>]]) then
+            return 'dts'
+          end
+        end
+      end,
+    },
+  },
+})
