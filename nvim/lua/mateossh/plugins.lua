@@ -38,6 +38,7 @@ use { 'ThePrimeagen/harpoon' }
 
   use { 'nvim-orgmode/orgmode' }
   use { 'folke/todo-comments.nvim' }
+  use { 'akinsho/git-conflict.nvim' }
 
   -- Color schemes
   use { 'ghifarit53/daycula-vim' }
