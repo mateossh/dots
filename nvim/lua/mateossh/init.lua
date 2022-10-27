@@ -101,10 +101,13 @@ vim.api.nvim_create_autocmd("FileType", {
 
 vim.g.do_filetype_lua = 1
 
--- Check first 25 lines for 'dt-bindings/zmk'
 vim.filetype.add({
+  extension = {
+    astro = "astro"
+  },
   pattern = {
     ['.*'] = {
+      -- Check first 25 lines of the file for 'dt-bindings/zmk'
       priority = -math.huge,
       function(path, bufnr)
         local content = vim.filetype.getlines(bufnr, 1, 25)
@@ -118,3 +121,6 @@ vim.filetype.add({
     },
   },
 })
+
+vim.g.vim_svelte_plugin_use_sass = 1
+vim.g.vim_svelte_plugin_use_typescript = 1

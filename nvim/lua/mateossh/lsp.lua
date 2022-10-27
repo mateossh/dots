@@ -127,6 +127,17 @@ require('lspconfig')['sumneko_lua'].setup{
     },
   },
 }
+
+
+require('lspconfig')['svelte'].setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
+
+require('lspconfig')['astro'].setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+}
 -- nvim_lsp.volar.setup{
 --   init_options = {
 --     typescript = {

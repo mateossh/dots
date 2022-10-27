@@ -39,6 +39,8 @@ use { 'ThePrimeagen/harpoon' }
   use { 'nvim-orgmode/orgmode' }
   use { 'folke/todo-comments.nvim' }
   use { 'akinsho/git-conflict.nvim' }
+  use { 'leafOfTree/vim-svelte-plugin' }
+  use { 'wuelnerdotexe/vim-astro' }
 
   -- Color schemes
   use { 'ghifarit53/daycula-vim' }
