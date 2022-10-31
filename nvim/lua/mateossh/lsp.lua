@@ -31,7 +31,7 @@ local on_attach = function(client, bufnr)
   -- vim.keymap.set('n', '<space>wl', function()
   --   print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   -- end, bufopts)
-  -- vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
+  vim.keymap.set('n', '<space>lf', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
 -- inspiration: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
