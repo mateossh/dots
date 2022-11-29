@@ -54,5 +54,6 @@ use { 'ThePrimeagen/harpoon' }
   use { 'owickstrom/vim-colors-paramount' }
   use { 'relastle/bluewery.vim' }
   use { 'folke/tokyonight.nvim' }
+  use { 'shaunsingh/oxocarbon.nvim', branch = 'fennel' }
 
 end)
