@@ -96,9 +96,21 @@ require('lspconfig')['tailwindcss'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
 }
+
+local nvim_lsp = require("lspconfig")
 require('lspconfig')['tsserver'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
+  -- Omitting some options
+  root_dir = nvim_lsp.util.root_pattern("package.json")
+}
+
+require('lspconfig').denols.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  -- Omitting some options
+  root_dir = nvim_lsp.util.root_pattern("deno.json"),
+
 }
 
 --  Settings from: https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#sumneko_lua

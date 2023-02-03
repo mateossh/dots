@@ -1,6 +1,6 @@
 vim.opt.relativenumber = true
 vim.opt.number = true
-vim.opt.list = true
+-- vim.opt.list = true
 vim.opt.listchars='tab:│ ,nbsp:␣,trail:·,extends:>,precedes:<,eol:↴,space:⋅'
 vim.opt.colorcolumn = "80"
 vim.opt.clipboard = "unnamedplus"

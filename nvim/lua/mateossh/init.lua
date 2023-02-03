@@ -37,7 +37,9 @@ require('project_nvim').setup()
 require('todo-comments').setup()
 require('mateossh.comment')
 require('mateossh.neogit')
-require('mateossh.orgmode')
+require('mateossh.lualine')
+require('mateossh.nvimtree')
+-- require('mateossh.orgmode')
 
 require('refactoring').setup({})
 require('harpoon').setup({})
@@ -66,7 +68,8 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 
 -- Mappings
-map('n', '<leader>ft', '<cmd>:NERDTreeToggle<cr>') -- NERDTree (TODO: orphan nerdtree??)
+-- map('n', '<leader>ft', '<cmd>:NERDTreeToggle<cr>') -- NERDTree (TODO: orphan nerdtree??)
+map('n', '<leader>ft', '<cmd>:NvimTreeToggle<cr>') -- NERDTree (TODO: orphan nerdtree??)
 
 map('n', '<leader>ff', '<cmd>Telescope find_files<cr>')
 map('n', '<leader>fg', '<cmd>Telescope live_grep<cr>')
