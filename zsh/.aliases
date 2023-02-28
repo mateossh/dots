@@ -1,0 +1,10 @@
+alias rm="nocorrect rm -i"
+alias mv="nocorrect mv -i"
+alias cp="nocorrect cp -i"
+alias ln="nocorrect ln -i"
+alias cp="cp -r"
+
+alias l="exa -lhg --group-directories-first"
+alias la="exa -lhga --group-directories-first"
+alias cat="bat"
+alias vim="nvim"
