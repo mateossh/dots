@@ -1,0 +1,59 @@
+[
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space": null
+    }
+  },
+  {
+    "context": "vim_operator == none && !VimWaiting && vim_mode != insert",
+    "bindings": {
+      "space f f": "file_finder::Toggle",
+      "space f t": "project_panel::ToggleFocus",
+      "space w d": "pane::CloseActiveItem",
+      "space w /": "pane::SplitRight",
+      "space w -": "pane::SplitDown",
+
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "space r n": "editor::Rename",
+      "space space": "editor::Hover",
+      "space c a": "editor::ToggleCodeActions",
+      "space g r": "editor::FindAllReferences",
+      "space g i": "editor::GoToImplementation",
+      "space g d": "editor::GoToDefinition",
+      "space g shift-D": "editor::GoToTypeDefinition",
+      "[ d": "editor::GoToPrevDiagnostic",
+      "] d": "editor::GoToDiagnostic"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "g c": "editor::ToggleComments"
+    }
+  },
+  {
+    "context": "Dock",
+    "bindings": {
+      "space w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "space w j": ["workspace::ActivatePaneInDirection", "Down"],
+      "space w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "space w l": ["workspace::ActivatePaneInDirection", "Right"]
+    }
+  },
+  {
+    "context": "Editor && (showing_code_actions || showing_completions)",
+    "bindings": {
+      "k": "editor::ContextMenuPrev",
+      "j": "editor::ContextMenuNext"
+    }
+  }
+]
