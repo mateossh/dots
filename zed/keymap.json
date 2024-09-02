@@ -8,6 +8,8 @@
   {
     "context": "vim_operator == none && !VimWaiting && vim_mode != insert",
     "bindings": {
+      "space b b": "tab_switcher::Toggle",
+
       "space f f": "file_finder::Toggle",
       "space f t": "project_panel::ToggleFocus",
       "space w d": "pane::CloseActiveItem",
@@ -52,8 +54,8 @@
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "k": "editor::ContextMenuPrev",
-      "j": "editor::ContextMenuNext"
+      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-j": "editor::ContextMenuNext"
     }
   }
 ]

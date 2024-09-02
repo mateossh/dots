@@ -7,7 +7,12 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Catppuccin Mocha",
+  "language_models": {
+    "ollama": {}
+  },
+  "performance": { "show_in_status_bar": true },
+  "theme": "Tokyo Night Storm",
+  "buffer_font_family": "Liga SFMono Nerd Font",
   "vim_mode": true,
   "telemetry": {
     "diagnostics": false,
@@ -22,11 +27,44 @@
   },
   "cursor_blink": false,
   "assistant": {
-    "version": "1",
-    "provider": {
-      "name": "openai",
-      "api_url": "http://localhost:11434/v1",
-      "default_model": "gpt-4"
+    "default_model": {
+      "provider": "ollama",
+      "model": "codellama:code"
+    },
+    "version": "2",
+    "provider": null
+  },
+  "show_whitespaces": "boundary",
+  "languages": {
+    "TypeScript": {
+      // "language_servers": ["typescript-language-server", "!vtsls", ".."]
     }
+  },
+  "lsp": {
+    "eslint": {
+      "settings": {
+        "onIgnoredFiles": "off"
+      }
+    }
+  },
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": false,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+  "enable_preview_from_file_finder": true,
+  "enable_preview_from_code_navigation": true,
+  "wrap_guides": [80],
+  "soft_wrap": "editor_width",
+  "project_panel": {
+    "indent_size": 16,
+    "dock": "left"
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
   }
 }
