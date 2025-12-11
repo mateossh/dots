@@ -10,8 +10,14 @@
     "bindings": {
       "space b b": "tab_switcher::Toggle",
 
-      "space f f": "file_finder::Toggle",
       "space f t": "project_panel::ToggleFocus",
+
+      // "space f f": "file_finder::Toggle",
+      "space f f": [
+        "task::Spawn",
+        { "task_name": "Telescope File Finder", "reveal_target": "center" }
+      ],
+
       "space w d": "pane::CloseActiveItem",
       "space w /": "pane::SplitRight",
       "space w -": "pane::SplitDown",
