@@ -1,21 +1,22 @@
-vim.filetype.add({
-  extension = {
-    astro = "astro",
-    mdx = "markdown",
-  },
-  pattern = {
-    ['.*'] = {
-      -- Check first 25 lines of the file for 'dt-bindings/zmk'
-      priority = -math.huge,
-      function(path, bufnr)
-        local content = vim.filetype.getlines(bufnr, 1, 25)
+local zmk_dt_bindings_re = vim.regex([[\<dt-bindings\/zmk\>]])
 
-        for _, line in ipairs(content) do
-          if vim.filetype.matchregex(line, [[\<dt-bindings\/zmk\>]]) then
-            return 'dts'
-          end
-        end
-      end,
-    },
-  },
+vim.filetype.add({
+	extension = {
+		astro = "astro",
+		mdx = "markdown",
+	},
+	pattern = {
+		[".*"] = {
+			function(_path, bufnr)
+				-- Check first 25 lines of the file for 'dt-bindings/zmk'
+				local lines = vim.api.nvim_buf_get_lines(bufnr, 0, 25, false)
+				for _, line in ipairs(lines) do
+					if zmk_dt_bindings_re:match_str(line) ~= nil then
+						return "dts"
+					end
+				end
+			end,
+			{ priority = -math.huge },
+		},
+	},
 })

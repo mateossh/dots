@@ -12,11 +12,25 @@ return {
   'shaunsingh/oxocarbon.nvim',
 
   {
+    'datsfilipe/vesper.nvim',
+
+    config = function ()
+      vim.cmd.colorscheme('vesper')
+    end,
+  },
+
+  {
     'ofirgall/ofirkai.nvim',
   },
 
   'Everblush/everblush.vim',
-  'kvrohit/rasmus.nvim',
+  {
+    'kvrohit/rasmus.nvim',
+
+    config = function()
+      -- vim.g.rasmus_variant 'dark'
+    end,
+  },
 
   {
     'olivercederborg/poimandres.nvim',
@@ -25,6 +39,7 @@ return {
       require('poimandres').setup({
         bold_vert_split = false, -- use bold vertical separators
       })
+      -- vim.cmd.colorscheme('poimandres')
     end,
 
     lazy = true,

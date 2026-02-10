@@ -2,7 +2,7 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 -- vim.opt.list = true
 vim.opt.listchars='tab:│ ,nbsp:␣,trail:·,extends:>,precedes:<,eol:↴,space:⋅'
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,120"
 vim.opt.clipboard = "unnamedplus"
 vim.opt.termguicolors = true
 
@@ -20,8 +20,11 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.foldmethod= "expr"
-vim.opt.foldenable = false 
+vim.opt.foldenable = false
 
 vim.opt.background = "dark"
 
 vim.g.mapleader = " "
+
+-- Enable persistent undo history
+vim.opt.undofile = true
