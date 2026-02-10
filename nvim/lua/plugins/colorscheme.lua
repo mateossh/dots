@@ -14,9 +14,9 @@ return {
   {
     'datsfilipe/vesper.nvim',
 
-    config = function ()
-      vim.cmd.colorscheme('vesper')
-    end,
+    -- config = function()
+    --   vim.cmd.colorscheme('vesper')
+    -- end,
   },
 
   {
@@ -39,10 +39,9 @@ return {
       require('poimandres').setup({
         bold_vert_split = false, -- use bold vertical separators
       })
-      -- vim.cmd.colorscheme('poimandres')
+      vim.cmd.colorscheme('poimandres')
     end,
 
-    lazy = true,
     priority = 1000,
   }
 }
