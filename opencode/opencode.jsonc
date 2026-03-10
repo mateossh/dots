@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "codemogger": {
+      "type": "local",
+      "command": ["codemogger", "mcp"],
+      "enabled": true
+    },
+    "opensrc": {
+      "type": "local",
+      "command": ["opensrc-mcp"],
+      "enabled": true
+    }
+  }
+}
